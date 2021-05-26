@@ -1,0 +1,11 @@
+<div class="container-fluid d-flex align-items-center justify-content-between border border-5 mt-5">
+  <ul class="col-6">
+  <% @restaurants.each do |restaurant| %>
+    <li style="list-style-type: none;"> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-secondary p-3 w-50 my-4'  %> </li>
+  <% end %>
+  </ul>
+  <div class="col-8">
+    <%= image_tag("ralph-ravi-kayden-jmGHU6fim2s-unsplash.jpg", :alt => "store image", class: 'rounded img-fluid h-50 w-50 shadow-sm') %>  
+  </div>
+</div>
+
