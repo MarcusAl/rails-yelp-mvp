@@ -1,11 +1,44 @@
-<div class="container-fluid d-flex align-items-center justify-content-between border border-5 mt-5">
-  <ul class="col-6">
-  <% @restaurants.each do |restaurant| %>
-    <li style="list-style-type: none;"> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-secondary p-3 w-50 my-4'  %> </li>
-  <% end %>
-  </ul>
-  <div class="col-8">
-    <%= image_tag("ralph-ravi-kayden-jmGHU6fim2s-unsplash.jpg", :alt => "store image", class: 'rounded img-fluid h-50 w-50 shadow-sm') %>  
+<% if @restaurants[0..5] %>
+<div class="container-fluid mx-auto d-flex align-items-center justify-content-between border border-5 mt-5">
+  <div class="row align-items-center">
+    <ul class="col-12 col-md-5 d-flex justify-content-between">
+    <% @restaurants[0..5].each do |restaurant| %>
+      <li style="list-style-type: none;"> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-secondary p-3 w-100 my-3'  %> </li>
+    <% end %>
+    </ul>
+    <div class="col-12 col-md-7 d-flex justify-content-center">
+      <%= image_tag("ralph-ravi-kayden-jmGHU6fim2s-unsplash.jpg", :alt => "store image", class: 'rounded img-fluid h-50 w-50 shadow-sm') %>  
+    </div>
   </div>
 </div>
+<% end %>
 
+<% if @restaurants[5..10] %>
+<div class="container-fluid mx-auto d-flex align-items-center justify-content-between border border-5 mt-5">
+  <div class="row align-items-center">
+    <ul class="col-12 col-md-5 d-flex justify-content-between">
+    <% @restaurants[5..10].each do |restaurant| %>
+      <li style="list-style-type: none;"> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-secondary p-3 w-100 my-3'  %> </li>
+    <% end %>
+    </ul>
+    <div class="col-12 col-md-7 d-flex justify-content-center">
+      <%= image_tag("ralph-ravi-kayden-jmGHU6fim2s-unsplash.jpg", :alt => "store image", class: 'rounded img-fluid h-50 w-50 shadow-sm') %>  
+    </div>
+  </div>
+</div>
+<% end %>
+
+<% if @restaurants[10..15] %>
+<div class="container-fluid mx-auto d-flex align-items-center justify-content-between border border-5 mt-5">
+  <div class="row align-items-center">
+    <ul class="col-12 col-md-5 d-flex justify-content-between">
+    <% @restaurants[10..15].each do |restaurant| %>
+      <li style="list-style-type: none;"> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-secondary p-3 w-100 my-3'  %> </li>
+    </ul>
+    <% end %>
+    <div class="col-12 col-md-7 d-flex justify-content-center">
+      <%= image_tag("ralph-ravi-kayden-jmGHU6fim2s-unsplash.jpg", :alt => "store image", class: 'rounded img-fluid h-50 w-50 shadow-sm') %>  
+    </div>
+  </div>
+</div>
+<% end %>
